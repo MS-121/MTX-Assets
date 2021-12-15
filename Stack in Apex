@@ -1,0 +1,30 @@
+public class Stack {
+    List<Object>item;
+    public Stack(){
+        this.item=new List<Object>();
+    }
+    public Integer size(){
+        return this.item.size();
+    }
+    
+    public Boolean isEmpty(){
+        return size()==0;
+    }
+    public void push(Object value){
+        this.item.add(value);
+    }
+    public Object pop(){
+        if(isEmpty()){
+            System.assert(false,'>>>Empty Stack');
+        }
+        return this.item.remove(size() - 1);
+    }
+    
+    public Object top(){
+        if (isEmpty()) {
+            System.assert(false,'>>>Empty Stack');
+        }
+        
+        return this.item.get(size() - 1);
+    }
+}
